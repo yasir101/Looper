@@ -56,7 +56,17 @@
         <dict>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>com.googleusercontent.apps.1017529723910-s68nuigb8fog34gb8ktnub0ggtgnbnft</string> <!-- REVERSED_CLIENT_ID -->
+                <string>com.googleusercontent.apps.1017529723910-s68nuigb8fog34gb8ktnub0ggtgnbnft</string>
+            </array>
+            <key>CFBundleURLName</key>
+            <string>com.looper.app</string>
+            <key>CFBundleURLTypes</key>
+            <string>Editor</string>
+        </dict>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>com.looper.app</string>
             </array>
         </dict>
     </array>
@@ -64,9 +74,11 @@
     <key>LSApplicationQueriesSchemes</key>
     <array>
         <string>google</string>
+        <string>googlechrome</string>
+        <string>googlechromes</string>
     </array>
 
-    <key>REVERSED_CLIENT_ID</key>
-    <string>com.googleusercontent.apps.1017529723910-s68nuigb8fog34gb8ktnub0ggtgnbnft</string> <!-- Same REVERSED_CLIENT_ID -->
+    <key>GIDClientID</key>
+    <string>1017529723910-s68nuigb8fog34gb8ktnub0ggtgnbnft.apps.googleusercontent.com</string>
 </dict>
 </plist>

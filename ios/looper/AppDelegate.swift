@@ -2,6 +2,7 @@ import UIKit
 import React
 import React_RCTAppDelegate
 import ReactAppDependencyProvider
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
   ) -> Bool {
+    // Configure Firebase
+    if FirebaseApp.app() == nil {
+      print("Configuring Firebase...")
+      FirebaseApp.configure()
+      if let app = FirebaseApp.app() {
+        print("Firebase configured successfully. Default app name: \(app.name)")
+      } else {
+        print("Failed to configure Firebase - app is nil after configuration")
+      }
+    } else {
+      print("Firebase already configured. Default app name: \(FirebaseApp.app()!.name)")
+    }
+    
     let delegate = ReactNativeDelegate()
     let factory = RCTReactNativeFactory(delegate: delegate)
     delegate.dependencyProvider = RCTAppDependencyProvider()
